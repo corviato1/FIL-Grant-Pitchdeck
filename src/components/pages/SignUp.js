@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Web3 from "web3";
+import { Home } from "./Home";
+import { Redirect } from "react-router-dom";
 import "../../App.css";
 
-class SignUp extends Component {
+class SignUp extends React.Component {
   async componentWillMount() {
     await this.loadWeb3();
-    await this.loadBlockchainData();
   }
 
   async loadWeb3() {
@@ -19,6 +20,30 @@ class SignUp extends Component {
         "Non-Ethereum browser detected. You should consider trying MetaMask!"
       );
     }
+  }
+
+  state = {
+    redirect: false,
+  };
+  setRedirect = () => {
+    this.setState({
+      redirect: true,
+    });
+  };
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/" />;
+    }
+  };
+  render() {
+    return (
+      <div>
+        {this.renderRedirect()}
+        <button onClick={this.setRedirect}>
+          Please Login with Metamask Thank you!
+        </button>
+      </div>
+    );
   }
 }
 
