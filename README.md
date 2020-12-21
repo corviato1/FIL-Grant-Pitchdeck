@@ -14,3 +14,10 @@ IPNS: http://ipfs.io/ipfs/
 ProjectVote:
 IPNS: http://ipfs.io/ipfs/
 ~http://ipfs.io/ipfs/
+
+
+
+***************************************************************
+1. As stated in Qmd6GMv5SJLGebtGjmpMdMa5vaL2jrJaGNPDgrHz6kmJKy Will add other pages by Christmas.
+
+2. 3x ipns .jpg hashes needed, Alex can you do that for me before Christmas?
